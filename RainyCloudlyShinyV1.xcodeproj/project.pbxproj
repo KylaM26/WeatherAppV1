@@ -15,6 +15,8 @@
 		D174AE1B20E37B7600C2BE12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D174AE1920E37B7600C2BE12 /* LaunchScreen.storyboard */; };
 		D174AE2820E3972F00C2BE12 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D174AE2720E3972F00C2BE12 /* Constants.swift */; };
 		D174AE2A20E39B6700C2BE12 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D174AE2920E39B6700C2BE12 /* WeatherData.swift */; };
+		D174AE2D20E3AE3800C2BE12 /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D174AE2C20E3AE3800C2BE12 /* WeatherCell.swift */; };
+		D174AE2F20E3AE4D00C2BE12 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = D174AE2E20E3AE4D00C2BE12 /* Weather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		D174AE1C20E37B7600C2BE12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D174AE2720E3972F00C2BE12 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D174AE2920E39B6700C2BE12 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		D174AE2C20E3AE3800C2BE12 /* WeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
+		D174AE2E20E3AE4D00C2BE12 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		D174AE2220E37D2F00C2BE12 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D174AE2E20E3AE4D00C2BE12 /* Weather.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -106,6 +111,7 @@
 		D174AE2320E37D3800C2BE12 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D174AE2C20E3AE3800C2BE12 /* WeatherCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -248,7 +254,9 @@
 			files = (
 				D174AE1320E37B7200C2BE12 /* WeatherVC.swift in Sources */,
 				D174AE1120E37B7200C2BE12 /* AppDelegate.swift in Sources */,
+				D174AE2D20E3AE3800C2BE12 /* WeatherCell.swift in Sources */,
 				D174AE2A20E39B6700C2BE12 /* WeatherData.swift in Sources */,
+				D174AE2F20E3AE4D00C2BE12 /* Weather.swift in Sources */,
 				D174AE2820E3972F00C2BE12 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

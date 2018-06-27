@@ -20,14 +20,14 @@ class WeatherData {
     
     var cityName: String {
         if _cityName == nil {
-            _cityName = "";
+            _cityName = "NA";
         }
         return _cityName;
     }
     
     var date: String {
         if _date == nil {
-            _date = "";
+            _date = "NA";
         }
         
         let dateFormatter = DateFormatter();
@@ -41,7 +41,7 @@ class WeatherData {
     
     var weatherType: String {
         if _weatherType == nil {
-            _weatherType = "";
+            _weatherType = "NA";
         }
         return _weatherType;
     }
@@ -57,9 +57,31 @@ class WeatherData {
         let currentWeatherURL = URL(string: CURRENT_WEATHER_URL)!;
         Alamofire.request(currentWeatherURL).responseJSON { (response) in // Is getting the JSON data.
             let result = response.result;
-            print(result);
+            
+            if let dict = result.value as? Dictionary<String, Any> {
+                
+                if let name = dict["name"] as? String {
+                    self._cityName = name.capitalized;
+                }
+                
+                // URL -> http://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=fc90c86d2bf24271bd1fd41295ac1a82
+                
+                if let type = dict["weather"] as? [Dictionary<String, Any>] { // For nested JSON data
+                    if let main = type[0]["main"] as? String { // 0 is for first array, and inside the first arry, find the key titled main.
+                        self._weatherType = main.capitalized;
+                    }
+                }
+                
+                if let weather = dict["main"] as? Dictionary<String, Any> {
+                    if let temp = weather["temp"] as? Double {
+                        let kelvinToFarenheitPredivision = (temp * (9 / 5) - 459.67);
+                        let kelvinToFarenheit = Double(round(10 * kelvinToFarenheitPredivision / 10));
+                        self._currentTemp = kelvinToFarenheit;
+                    }
+                }
+            }
+            completed();
         }
-        completed();
     }
 }
 

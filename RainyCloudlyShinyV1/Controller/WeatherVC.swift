@@ -18,17 +18,30 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var weatherImg: UIImageView!
     @IBOutlet weak var weatherDescription: UILabel!
+    
+    var weather: WeatherData! = nil;
 
     override func viewDidLoad() {
         super.viewDidLoad()
         weatherTabel.delegate = self;
         weatherTabel.dataSource = self;
-        WeatherData.instance.DownloadWeatherDetails { //  When completed setup UI with data
-             
+        
+        weather = WeatherData();
+        
+        if weather != nil{
+            weather.DownloadWeatherDetails {
+                self.UpdateMainUI();
+            }
         }
-
     }
 
+    func UpdateMainUI() {
+        self.dateLbl.text = weather.date;
+        self.temperatureLbl.text = "\(weather.currentTemp)°";
+        self.locationLbl.text = weather.cityName;
+        self.weatherDescription.text = weather.weatherType;
+        self.weatherImg.image = UIImage(named: weather.weatherType);
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1;
