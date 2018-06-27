@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3DB86EC025BD00D118B37551 /* Pods_RainyCloudlyShinyV1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23364A6402675CCFFBBBDF12 /* Pods_RainyCloudlyShinyV1.framework */; };
 		D174AE1120E37B7200C2BE12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D174AE1020E37B7200C2BE12 /* AppDelegate.swift */; };
-		D174AE1320E37B7200C2BE12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D174AE1220E37B7200C2BE12 /* ViewController.swift */; };
+		D174AE1320E37B7200C2BE12 /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D174AE1220E37B7200C2BE12 /* WeatherVC.swift */; };
 		D174AE1620E37B7200C2BE12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D174AE1420E37B7200C2BE12 /* Main.storyboard */; };
 		D174AE1820E37B7600C2BE12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D174AE1720E37B7600C2BE12 /* Assets.xcassets */; };
 		D174AE1B20E37B7600C2BE12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D174AE1920E37B7600C2BE12 /* LaunchScreen.storyboard */; };
@@ -21,7 +21,7 @@
 		B9B371C8C53AFC35333E2A41 /* Pods-RainyCloudlyShinyV1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RainyCloudlyShinyV1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RainyCloudlyShinyV1/Pods-RainyCloudlyShinyV1.debug.xcconfig"; sourceTree = "<group>"; };
 		D174AE0D20E37B7200C2BE12 /* RainyCloudlyShinyV1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RainyCloudlyShinyV1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D174AE1020E37B7200C2BE12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D174AE1220E37B7200C2BE12 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D174AE1220E37B7200C2BE12 /* WeatherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherVC.swift; sourceTree = "<group>"; };
 		D174AE1520E37B7200C2BE12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D174AE1720E37B7600C2BE12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D174AE1A20E37B7600C2BE12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -78,14 +78,14 @@
 		D174AE0F20E37B7200C2BE12 /* RainyCloudlyShinyV1 */ = {
 			isa = PBXGroup;
 			children = (
+				D174AE2620E383C600C2BE12 /* Utilites */,
 				D174AE2220E37D2F00C2BE12 /* Model */,
 				D174AE2320E37D3800C2BE12 /* View */,
 				D174AE2420E37D3F00C2BE12 /* Controller */,
-				D174AE1020E37B7200C2BE12 /* AppDelegate.swift */,
-				D174AE1220E37B7200C2BE12 /* ViewController.swift */,
 				D174AE1420E37B7200C2BE12 /* Main.storyboard */,
 				D174AE1720E37B7600C2BE12 /* Assets.xcassets */,
 				D174AE1920E37B7600C2BE12 /* LaunchScreen.storyboard */,
+				D174AE1020E37B7200C2BE12 /* AppDelegate.swift */,
 				D174AE1C20E37B7600C2BE12 /* Info.plist */,
 			);
 			path = RainyCloudlyShinyV1;
@@ -108,8 +108,16 @@
 		D174AE2420E37D3F00C2BE12 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D174AE1220E37B7200C2BE12 /* WeatherVC.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		D174AE2620E383C600C2BE12 /* Utilites */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilites;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,7 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D174AE1320E37B7200C2BE12 /* ViewController.swift in Sources */,
+				D174AE1320E37B7200C2BE12 /* WeatherVC.swift in Sources */,
 				D174AE1120E37B7200C2BE12 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
