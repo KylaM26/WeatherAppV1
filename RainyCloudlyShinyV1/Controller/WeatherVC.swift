@@ -23,6 +23,10 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.viewDidLoad()
         weatherTabel.delegate = self;
         weatherTabel.dataSource = self;
+        WeatherData.instance.DownloadWeatherDetails { //  When completed setup UI with data
+             
+        }
+
     }
 
     

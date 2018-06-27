@@ -396,6 +396,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G4W8G2YXN6;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = RainyCloudlyShinyV1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -415,6 +416,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G4W8G2YXN6;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = RainyCloudlyShinyV1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

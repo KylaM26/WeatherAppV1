@@ -8,6 +8,8 @@
 
 import Foundation
 
+typealias DownloadComplete = () -> ();
+
 let BASE_URL: String = "http://api.openweathermap.org/data/2.5/weather?";
 let APP_ID: String = "&appid=";
 let API_KEY: String = "fc90c86d2bf24271bd1fd41295ac1a82";
@@ -16,4 +18,4 @@ let API_KEY: String = "fc90c86d2bf24271bd1fd41295ac1a82";
 let LATITUDE: String = "lat=";
 let LONGITUTDE: String = "lon=";
 
-let CURRENT_WEATHER_URL: String = "\(BASE_URL)\(LATITUDE)-30\(LONGITUTDE)111\(APP_ID)\(API_KEY)";
+let CURRENT_WEATHER_URL: String = "\(BASE_URL)\(LATITUDE)35\(LONGITUTDE)139\(APP_ID)\(API_KEY)";
