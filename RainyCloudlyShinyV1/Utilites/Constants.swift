@@ -19,3 +19,8 @@ let LATITUDE: String = "lat=";
 let LONGITUTDE: String = "&lon=";
 
 let CURRENT_WEATHER_URL: String = "\(BASE_URL)\(LATITUDE)35\(LONGITUTDE)139\(APP_ID)\(API_KEY)";
+
+// TABLE VIEW FORECAST
+let FORECAST_BASE_URL: String = "http://api.openweathermap.org/data/2.5/forecast?";
+let FORECAST_CNT: String = "&cnt=";
+let FORECAST_URL: String = "\(FORECAST_BASE_URL)\(LATITUDE)35\(LONGITUTDE)139\(APP_ID)\(API_KEY)";

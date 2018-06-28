@@ -17,6 +17,7 @@
 		D174AE2A20E39B6700C2BE12 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D174AE2920E39B6700C2BE12 /* WeatherData.swift */; };
 		D174AE2D20E3AE3800C2BE12 /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D174AE2C20E3AE3800C2BE12 /* WeatherCell.swift */; };
 		D174AE2F20E3AE4D00C2BE12 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = D174AE2E20E3AE4D00C2BE12 /* Weather.swift */; };
+		D188503020E4BE730097F731 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = D188502F20E4BE730097F731 /* Forecast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		D174AE2920E39B6700C2BE12 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		D174AE2C20E3AE3800C2BE12 /* WeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
 		D174AE2E20E3AE4D00C2BE12 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		D188502F20E4BE730097F731 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		D174AE2220E37D2F00C2BE12 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D188502F20E4BE730097F731 /* Forecast.swift */,
 				D174AE2E20E3AE4D00C2BE12 /* Weather.swift */,
 			);
 			path = Model;
@@ -254,6 +257,7 @@
 			files = (
 				D174AE1320E37B7200C2BE12 /* WeatherVC.swift in Sources */,
 				D174AE1120E37B7200C2BE12 /* AppDelegate.swift in Sources */,
+				D188503020E4BE730097F731 /* Forecast.swift in Sources */,
 				D174AE2D20E3AE3800C2BE12 /* WeatherCell.swift in Sources */,
 				D174AE2A20E39B6700C2BE12 /* WeatherData.swift in Sources */,
 				D174AE2F20E3AE4D00C2BE12 /* Weather.swift in Sources */,
