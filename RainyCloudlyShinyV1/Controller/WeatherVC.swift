@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+
 class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var weatherTabel: UITableView!
@@ -29,7 +30,7 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         weatherTabel.dataSource = self;
         
         weather = WeatherData();
-        print(FORECAST_URL);
+
         if weather != nil{
             weather.DownloadWeatherDetails {
                 self.DownloadForecastData {
@@ -59,12 +60,13 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                     for dictionary in list { // Looks through all objects in dictionary
                         let forecast = Forecast(weatherDict: dictionary); // In forecast class.
                         self.forecasts.append(forecast);
-                        print(dictionary);
                     }
+                    self.forecasts.remove(at: 0); // Since the first day is the current day
+                    self.weatherTabel.reloadData(); // Data has to be reloaded since the table view is going faster, Think about it...
                 }
             }
+            completed();
         }
-        completed();
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -72,15 +74,17 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6;
+        return forecasts.count;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = weatherTabel.dequeueReusableCell(withIdentifier: "WeatherCell", for: indexPath) as? UITableViewCell {
+        if let cell = weatherTabel.dequeueReusableCell(withIdentifier: "WeatherCell", for: indexPath) as? WeatherCell {
+            let forecastCell = forecasts[indexPath.row];
+            cell.UpdateCell(forecast: forecastCell);
             return cell;
+        } else {
+            return UITableViewCell();
         }
-        
-        return UITableViewCell();
     }
     
     
